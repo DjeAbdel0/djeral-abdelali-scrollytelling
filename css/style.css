@@ -1,0 +1,117 @@
+/* Styles generaux */
+:root {
+  --bleu_fonce: #001f3f;
+  --bleu_ciel: #00b4d8;
+  --vert: #2ecc71;
+  --mauve: #6c5ce7;
+  --bleu_eau: #7fdbff;
+  --bleu_sombre: #004d99;
+}
+
+@font-face {
+  font-family: sans-serif; /* mettre la vraie font*/
+  src: url();
+}
+
+@font-face {
+  font-family: sans-serif; /* mettre la vraie font*/
+  src: url();
+}
+
+body {
+  overflow-x: hidden;
+}
+/*Header*/
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/img_arriere_plan/header_bg.jpg");
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 4vw;
+  color: var(--bleu_fonce);
+  text-align: center;
+}
+
+/*ScrollDown Indicator*/ /*Ne pas oublier de faire l'anim avec Gsap*/
+.ScrollHelpIndicator {
+  --showroomXGap: 5vw;
+  --leftMargin: 68px;
+  --menu-offset: 0px;
+  --menu-offset-overlay: 80px;
+  --menu-circle-nav-diamond-offset: 20px;
+  font-size: 22px;
+  font-family: Roobert, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  bottom: 23px;
+  user-select: none;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/*Sections*/
+section {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+#chapitre-no1 {
+  background-color: #000;
+}
+
+#chapitre-no2 {
+  background-color: #862828;
+}
+
+#chapitre-no3 {
+  background-color: #000;
+}
+
+#chapitre-no4 {
+  background-color: #862828;
+}
+
+#chapitre-no5 {
+  background-color: #000;
+}
+
+#chapitre-no6 {
+  background-color: #862828;
+}
+
+#chapitre-no7 {
+  background-color: #000;
+}
+
+#chapitre-no8 {
+  background-color: #862828;
+}
+
+/*Footer*/
+footer p {
+  position: relative;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: rgb(0, 0, 0); /*Attention a ce que ca soit visible*/
+  text-align: center;
+}
