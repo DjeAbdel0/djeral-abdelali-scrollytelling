@@ -9,24 +9,31 @@
 }
 
 @font-face {
-  font-family: sans-serif; /* mettre la vraie font*/
-  src: url();
+  font-family: "montserrat";
+  src: url(../fonts/Montserra/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: sans-serif; /* mettre la vraie font*/
-  src: url();
+  font-family: "varela";
+  src: url(../fonts/VerelaRound/VarelaRound-Regular.ttf);
 }
 
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
 /*Header*/
+
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/img_arriere_plan/header_bg.jpg");
+  background-image: url("../img/img_arriere_plan/space1.png");
+  background-size:cover; 
+  background-position: center; 
   position: relative;
+  background-repeat: no-repeat;
 }
 
 header h1 {
@@ -34,13 +41,26 @@ header h1 {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0;
   font-size: 4vw;
-  color: var(--bleu_fonce);
+  font-family: "varela";
+  color: var(--bleu_eau);
+  text-align: center;
+}
+header p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40vw;
+  background-color: #001f3f;
+  padding:1.5vh 1.5vw ;
+  font-size: 1vw;
+  font-family: "varela";
+  color: var(--bleu_eau);
   text-align: center;
 }
 
-/*ScrollDown Indicator*/ /*Ne pas oublier de faire l'anim avec Gsap*/
+/*ScrollDown Indicator*/ 
+
 .ScrollHelpIndicator {
   --showroomXGap: 5vw;
   --leftMargin: 68px;
@@ -52,7 +72,7 @@ header h1 {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  color: #000;
+  color:#fff;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,10 +80,45 @@ header h1 {
   left: calc(50% - 20px);
   width: 40px;
   height: 40px;
-  bottom: 23px;
+  bottom: 83px;
   user-select: none;
   pointer-events: none;
   opacity: 1;
+  animation: scrollDown 1.5s infinite;
+  -webkit-animation: scrollDown 1.5s infinite;
+}
+
+.scrollText {
+  font-size: 14px;
+  font-weight: 900;
+  fill: rgb(2, 2, 2);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(0);
+  } 
+  25% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    transform: translate(0);
+  }
+ 25% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translate(0);
+  }
 }
 
 /*Sections*/
@@ -72,37 +127,91 @@ section {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  border: red 2px dashed;
 }
+
 #chapitre-no1 {
-  background-color: #000;
+  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
 }
 
 #chapitre-no2 {
-  background-color: #862828;
+  background-image: url("../img/img_arriere_plan/space.png");
 }
 
 #chapitre-no3 {
-  background-color: #000;
+  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
 }
 
 #chapitre-no4 {
-  background-color: #862828;
+  background-image: url("../img/img_arriere_plan/space.png");
 }
 
 #chapitre-no5 {
-  background-color: #000;
+  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
 }
 
 #chapitre-no6 {
-  background-color: #862828;
+  background-image: url("../img/img_arriere_plan/space.png");
 }
 
 #chapitre-no7 {
-  background-color: #000;
+  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
 }
 
 #chapitre-no8 {
-  background-color: #862828;
+  background-image: url("../img/img_arriere_plan/space.png");
+}
+
+/*Sprite Sheet*/
+.exo, .exo2 {
+  height: 200vh;
+}
+.sprite {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/img_personnages/diver_ss.png);
+  height: 502px;
+  width: 502px;
+  animation: exo 1s infinite steps(48) paused;
+
+}
+.sprite2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/img_personnages/bird_ss.png);
+  height: 500px;
+  width: 500px;
+  animation: exo2 1s infinite steps(48) paused;
+
+}
+@keyframes exo {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24096px 0;
+  }
+}
+
+@keyframes exo2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24000px 0;
+  }
+}
+
+.is-scrolling .sprite {
+  animation-play-state: running;
+}
+
+.is-scrolling .sprite2 {
+  animation-play-state: running;
 }
 
 /*Footer*/
