@@ -29,7 +29,7 @@ body {
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/img_arriere_plan/space1.png");
+  background-image: url("../img/img_arriere_plan/planete_1920_1080.png");
   background-size:cover; 
   background-position: center; 
   position: relative;
@@ -131,35 +131,60 @@ section {
 }
 
 #chapitre-no1 {
-  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
+  background-image: url("../img/img_arriere_plan/ciel_1920_1080.png");
 }
 
 #chapitre-no2 {
-  background-image: url("../img/img_arriere_plan/space.png");
+  background-image: url("../img/img_arriere_plan/surface_1920_1080.png");
 }
 
 #chapitre-no3 {
-  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
+  background-image: url("../img/img_arriere_plan/space.png");
 }
+
 
 #chapitre-no4 {
   background-image: url("../img/img_arriere_plan/space.png");
 }
 
 #chapitre-no5 {
-  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
+  background-image: url("../img/img_arriere_plan/milieu_eau_1920_1080.png");
 }
 
 #chapitre-no6 {
-  background-image: url("../img/img_arriere_plan/space.png");
+  background-image: url("../img/img_arriere_plan/milieu_eau_1920_1080.png");
 }
 
 #chapitre-no7 {
-  background-image: url("../img/img_arriere_plan/ciel_nuageux.png");
+  background-image: url("../img/img_arriere_plan/temple_bg.png");
+  position: relative;
+  z-index: 1;
+}
+
+/*Parallax*/
+.top  {
+  position: absolute;
+  top: 12vh;
+  right: 20vw;
+  z-index: 2;
+}
+
+.mid  {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  z-index: 3;
+}
+
+.bottom  {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
 }
 
 #chapitre-no8 {
-  background-image: url("../img/img_arriere_plan/space.png");
+  background-image: url("../img/img_arriere_plan/bottom_sea_1920_1080.png");
 }
 
 /*Sprite Sheet*/
