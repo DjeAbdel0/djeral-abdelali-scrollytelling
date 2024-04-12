@@ -125,9 +125,11 @@ header p {
 section {
   width: 100vw;
   height: 100vh;
+  border: red 2px dashed;
   background-size: cover;
   background-position: center;
-  border: red 2px dashed;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 #chapitre-no1 {
@@ -141,7 +143,6 @@ section {
 #chapitre-no3 {
   background-image: url("../img/img_arriere_plan/space.png");
 }
-
 
 #chapitre-no4 {
   background-image: url("../img/img_arriere_plan/space.png");
@@ -157,34 +158,64 @@ section {
 
 #chapitre-no7 {
   background-image: url("../img/img_arriere_plan/temple_bg.png");
-  position: relative;
-  z-index: 1;
 }
+
 
 /*Parallax*/
-.top  {
+.top {
   position: absolute;
-  top: 12vh;
-  right: 20vw;
+  top: 10vh; 
+  right: 10vw;
   z-index: 2;
+  width: 60%;
+  max-width: 100%; 
+  height: auto; 
 }
 
-.mid  {
+.mid {
   position: absolute;
-  top: 20vh;
-  left: 0;
+  top: 25vh; 
   z-index: 3;
+  width: 70%;
+  max-width: 100%;
+  height: auto;
 }
 
-.bottom  {
+.bottom {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 4;
+  width: 60%;
+  max-width: 100%;
+  height: auto;
 }
+
+@media (max-width: 1000px) {
+  .top, .mid, .bottom {
+    width: 50%; 
+  }
+}
+
+@media (max-width: 900px) {
+  #chapitre-no7 {
+    background-image: url("../img/img_arriere_plan/temple_eau_1920_1080.png");
+  }
+  .top{
+    width: 0; 
+  }
+  .mid{
+    width: 0; 
+  }
+  .bottom{
+    width: 0; 
+  }
+}
+
 
 #chapitre-no8 {
   background-image: url("../img/img_arriere_plan/bottom_sea_1920_1080.png");
+  position: relative;
 }
 
 /*Sprite Sheet*/
