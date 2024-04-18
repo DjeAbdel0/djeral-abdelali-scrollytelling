@@ -1,4 +1,7 @@
-/* Styles generaux */
+
+/*------------------------------------------------------------------
+Styles generaux 
+--------------------------------------------------------------------*/ 
 :root {
   --bleu_fonce: #001f3f;
   --bleu_ciel: #00b4d8;
@@ -6,6 +9,7 @@
   --mauve: #6c5ce7;
   --bleu_eau: #7fdbff;
   --bleu_sombre: #004d99;
+  --fond_texte: #001f3f;
 }
 
 @font-face {
@@ -24,7 +28,29 @@ body {
   padding: 0;
 }
 
-/*Header*/
+ul.technique-gsap{
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+ul.technique-gsap li{
+  margin: 5px 0;
+}
+/*------------------------------------------------------------------
+Header
+--------------------------------------------------------------------*/ 
 
 header {
   width: 100vw;
@@ -51,7 +77,7 @@ header p {
   bottom: 0;
   left: 0;
   width: 40vw;
-  background-color: #001f3f;
+  background-color: var(--fond_texte);
   padding:1.5vh 1.5vw ;
   font-size: 1vw;
   font-family: "varela";
@@ -59,7 +85,9 @@ header p {
   text-align: center;
 }
 
-/*ScrollDown Indicator*/ 
+/*------------------------------------------------------------------
+ScrollDown Indicator
+--------------------------------------------------------------------*/ 
 
 .ScrollHelpIndicator {
   --showroomXGap: 5vw;
@@ -92,7 +120,7 @@ header p {
 .scrollText {
   font-size: 14px;
   font-weight: 900;
-  fill: rgb(2, 2, 2);
+  fill: #fff;
   text-anchor: middle;
   dominant-baseline: middle;
 }
@@ -122,11 +150,14 @@ header p {
   }
 }
 
-/*Sections*/
+
+/*------------------------------------------------------------------
+Sections
+--------------------------------------------------------------------*/ 
+
 section {
   width: 100vw;
   height: 100vh;
-  border: red 2px dashed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,13 +169,14 @@ section p {
   bottom: 0;
   left: 0;
   width: 40vw;
-  background-color: #001f3f;
+  background-color: var(--fond_texte);
   padding:1.5vh 1.5vw ;
   font-size: 1vw;
   font-family: "varela";
   color: var(--bleu_eau);
   text-align: center;
 }
+
 #chapitre-no1 {
   background-image: url("../img/img_arriere_plan/ciel_1920_1080.png");
 }
@@ -154,12 +186,11 @@ section p {
 }
 
 #chapitre-no3 {
-  background-image: url("../img/img_arriere_plan/vague.jpg");
-
+  background-image: url("../img/img_arriere_plan/vague_1920_1080.jpg");
 }
 
 #chapitre-no4 {
-  background-image: url("../img/img_arriere_plan/bateau_.jpg");
+  background-image: url("../img/img_arriere_plan/bateau_1920_1080.jpg");
 }
 
 #chapitre-no5 {
@@ -167,7 +198,7 @@ section p {
 }
 
 #chapitre-no6 {
-  background-image: url("../img/img_arriere_plan/image_fx_japanese_style_of_deepsea_without_fishs_and_d.jpg");
+  background-image: url("../img/img_arriere_plan/ile_flottante_1920_1080.jpg");
 }
 
 #chapitre-no7 {
@@ -175,7 +206,10 @@ section p {
 }
 
 
-/*Parallax*/
+/*------------------------------------------------------------------
+Parallax
+--------------------------------------------------------------------*/ 
+
 .top {
   position: absolute;
   top: 10vh; 
@@ -207,7 +241,7 @@ section p {
 
 @media (max-width: 1000px) {
   .top, .mid, .bottom {
-    width: 50%; 
+    width: 50vw; 
   }
 }
 
@@ -232,7 +266,11 @@ section p {
   position: relative;
 }
 
-/*Sprite Sheet*/
+
+/*------------------------------------------------------------------
+Sprite Sheet
+--------------------------------------------------------------------*/ 
+
 .exo, .exo2 {
   height: 200vh;
 }
@@ -284,7 +322,11 @@ section p {
   animation-play-state: running;
 }
 
-/*Footer*/
+
+/*------------------------------------------------------------------
+Footer
+--------------------------------------------------------------------*/ 
+
 footer p {
   position: relative;
   bottom: 10px;
