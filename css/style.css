@@ -57,7 +57,7 @@ Header
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/img_arriere_plan/planete_1920_1080.png");
+  background-image: url("../img/img_arriere_plan/galaxy.png");
   background-size:cover; 
   background-position: center; 
   position: relative;
@@ -159,7 +159,7 @@ Sections
 
 section {
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,10 +179,10 @@ section p {
   text-align: center;
 }
 /*------------------------------------------------------------------
-Chapitre 1
+Chapitre 1 : Parallax
 --------------------------------------------------------------------*/
 #chapitre-no1 {
-  background-image: url("../img/img_arriere_plan/ciel_1920_1080.png");
+  background-image: url("../img/img_arriere_plan/parallax/fond_montagnes.png");
 }
 
 .text {
@@ -205,64 +205,37 @@ Chapitre 1
   -webkit-text-stroke-color: var(--bleu_fonce);
   color: transparent;
 }
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
 /*------------------------------------------------------------------
 Chapitre 2
 --------------------------------------------------------------------*/
 
 #chapitre-no2 {
-  background-image: url("../img/img_arriere_plan/surface_1920_1080.png");
+  background-image: url("../img/img_arriere_plan/surface_hd.png");
 }
 #chapitre-no3 {
-  background-image: url("../img/img_arriere_plan/vague_1920_1080.jpg");
+  background-color: #001f3f;
 }
 
 #chapitre-no4 {
-  background-image: url("../img/img_arriere_plan/bateau_1920_1080.jpg");
+  background-image: url("../img/img_arriere_plan/plan-eau-2.png");
 }
 
 #chapitre-no5 {
-  background-image: url("../img/img_arriere_plan/milieu_eau_1920_1080.png");
+  background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
 #chapitre-no6 {
-  background-image: url("../img/img_arriere_plan/ile_flottante_1920_1080.jpg");
+  background-image: url("../img/img_arriere_plan/plan-eau-3.png");
 }
 
 #chapitre-no7 {
-  background-image: url("../img/img_arriere_plan/temple_bg.png");
-}
-
-/*------------------------------------------------------------------
-Chapitre 7 / Parallax
---------------------------------------------------------------------*/ 
-
-.top {
-  position: absolute;
-  top: 10vh; 
-  right: 10vw;
-  z-index: 2;
-  width: 60%;
-  max-width: 100%; 
-  height: auto; 
-}
-
-.mid {
-  position: absolute;
-  top: 25vh; 
-  z-index: 3;
-  width: 70%;
-  max-width: 100%;
-  height: auto;
-}
-
-.bottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 4;
-  width: 60%;
-  max-width: 100%;
-  height: auto;
+  background-image: url("../img/img_arriere_plan/plan-eau-4.png")
 }
 
 @media (max-width: 1000px) {
@@ -288,7 +261,7 @@ Chapitre 7 / Parallax
 
 
 #chapitre-no8 {
-  background-image: url("../img/img_arriere_plan/bottom_sea_1920_1080.png");
+  background-image: url("../img/img_arriere_plan/bottom_sea.png");
   position: relative;
 }
 
