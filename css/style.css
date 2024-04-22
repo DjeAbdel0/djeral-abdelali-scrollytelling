@@ -1,4 +1,6 @@
 
+
+
 /*------------------------------------------------------------------
 Styles generaux 
 --------------------------------------------------------------------*/ 
@@ -176,15 +178,40 @@ section p {
   color: var(--bleu_eau);
   text-align: center;
 }
-
+/*------------------------------------------------------------------
+Chapitre 1
+--------------------------------------------------------------------*/
 #chapitre-no1 {
   background-image: url("../img/img_arriere_plan/ciel_1920_1080.png");
 }
 
+.text {
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  z-index: 1;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.outline-text {
+  position: absolute;
+  top: 2vh;
+  left: 1vw;
+  z-index: 3;
+  font-size: 4rem;
+  font-weight: 600;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: var(--bleu_fonce);
+  color: transparent;
+}
+/*------------------------------------------------------------------
+Chapitre 2
+--------------------------------------------------------------------*/
+
 #chapitre-no2 {
   background-image: url("../img/img_arriere_plan/surface_1920_1080.png");
 }
-
 #chapitre-no3 {
   background-image: url("../img/img_arriere_plan/vague_1920_1080.jpg");
 }
@@ -205,9 +232,8 @@ section p {
   background-image: url("../img/img_arriere_plan/temple_bg.png");
 }
 
-
 /*------------------------------------------------------------------
-Parallax
+Chapitre 7 / Parallax
 --------------------------------------------------------------------*/ 
 
 .top {

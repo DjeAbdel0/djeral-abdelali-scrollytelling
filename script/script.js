@@ -1,7 +1,10 @@
 
 let timer;
 
-/*Fonction Scroll */
+
+/*------------------------------------------------------------------
+Fonction Scroll 
+--------------------------------------------------------------------*/ 
 function handleScroll() {
     document.body.classList.add('is-scrolling');
   
@@ -15,4 +18,19 @@ function handleScroll() {
   window.addEventListener('scroll', handleScroll);
   
 
+/*------------------------------------------------------------------
+Chapitre 2 : titre Anim
+--------------------------------------------------------------------*/ 
+
+  gsap.to(".text, .outline-text", {
+    scrollTrigger: {
+      trigger: ".text, .outline-text",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 1,
+    },
+    y: '15vh',
+  });
+
+  
   
