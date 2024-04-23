@@ -1,9 +1,6 @@
-
-
-
 /*------------------------------------------------------------------
 Styles generaux 
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 :root {
   --bleu_fonce: #001f3f;
   --bleu_ciel: #00b4d8;
@@ -30,8 +27,8 @@ body {
   padding: 0;
 }
 
-ul.technique-gsap{
-  background: rgba(0,0,0,0.3);
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 10px;
   font-family: monospace;
@@ -47,19 +44,19 @@ ul.technique-gsap{
   left: 0;
 }
 
-ul.technique-gsap li{
+ul.technique-gsap li {
   margin: 5px 0;
 }
 /*------------------------------------------------------------------
 Header
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 
 header {
   width: 100vw;
   height: 100vh;
   background-image: url("../img/img_arriere_plan/galaxy.png");
-  background-size:cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   position: relative;
   background-repeat: no-repeat;
 }
@@ -80,7 +77,7 @@ header p {
   left: 0;
   width: 40vw;
   background-color: var(--fond_texte);
-  padding:1.5vh 1.5vw ;
+  padding: 1.5vh 1.5vw;
   font-size: 1vw;
   font-family: "varela";
   color: var(--bleu_eau);
@@ -89,7 +86,7 @@ header p {
 
 /*------------------------------------------------------------------
 ScrollDown Indicator
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 
 .ScrollHelpIndicator {
   --showroomXGap: 5vw;
@@ -102,7 +99,7 @@ ScrollDown Indicator
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  color:#fff;
+  color: #fff;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -127,11 +124,10 @@ ScrollDown Indicator
   dominant-baseline: middle;
 }
 
-
 @keyframes scrollDown {
   0% {
     transform: translate(0);
-  } 
+  }
   25% {
     transform: translateY(15px);
   }
@@ -144,7 +140,7 @@ ScrollDown Indicator
   0% {
     transform: translate(0);
   }
- 25% {
+  25% {
     transform: translateY(15px);
   }
   50% {
@@ -152,10 +148,9 @@ ScrollDown Indicator
   }
 }
 
-
 /*------------------------------------------------------------------
 Sections
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 
 section {
   width: 100vw;
@@ -172,19 +167,21 @@ section p {
   left: 0;
   width: 40vw;
   background-color: var(--fond_texte);
-  padding:1.5vh 1.5vw ;
+  padding: 1.5vh 1.5vw;
   font-size: 1vw;
   font-family: "varela";
   color: var(--bleu_eau);
   text-align: center;
+  z-index: 1000000;
 }
 /*------------------------------------------------------------------
-Chapitre 1 : Parallax
+Chapitre 1 
 --------------------------------------------------------------------*/
 #chapitre-no1 {
   background-image: url("../img/img_arriere_plan/parallax/fond_montagnes.png");
+  overflow: hidden;
 }
-
+/*---Anim titre---*/
 .text {
   position: absolute;
   top: 2vh;
@@ -205,10 +202,32 @@ Chapitre 1 : Parallax
   -webkit-text-stroke-color: var(--bleu_fonce);
   color: transparent;
 }
+/*---Parallax---*/
+.mont-gauche {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  bottom: 0vh;
+  left: -5vw;
+  z-index: 3;
+}
 
-img{
-  width: 100px;
-  height: 100px;
+.mont-droite {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  bottom: 0vh;
+  right: -1vw;
+  z-index: 2;
+}
+
+.arbres {
+  position: absolute;
+  width: 110vw;
+  height: 70vh;
+  left: -5vw;
+  bottom: -25vh;
+  z-index: 4;
 }
 
 /*------------------------------------------------------------------
@@ -218,6 +237,54 @@ Chapitre 2
 #chapitre-no2 {
   background-image: url("../img/img_arriere_plan/surface_hd.png");
 }
+/*---SpriteSheet Oiseau---*/
+
+.ss-diver {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 502px;
+  height: 502px;
+  outline: red 2px dashed;
+  z-index: 155555;
+  background-repeat: no-repeat;
+}
+.ss-oiseau {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/img_personnages/bird_ss.png);
+  height: 500px;
+  width: 500px;
+  animation: oiseau 1s infinite steps(48) paused;
+  outline: red 2px dashed;
+  z-index: 155555;
+}
+@keyframes diver {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24096px 0;
+  }
+}
+
+@keyframes oiseau {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24000px 0;
+  }
+}
+
+.is-scrolling .ss-diver,.is-scrolling .ss-oiseau  {
+  animation-play-state: running;
+}
+
+
 #chapitre-no3 {
   background-color: #001f3f;
 }
@@ -235,12 +302,14 @@ Chapitre 2
 }
 
 #chapitre-no7 {
-  background-image: url("../img/img_arriere_plan/plan-eau-4.png")
+  background-image: url("../img/img_arriere_plan/plan-eau-4.png");
 }
 
 @media (max-width: 1000px) {
-  .top, .mid, .bottom {
-    width: 50vw; 
+  .top,
+  .mid,
+  .bottom {
+    width: 50vw;
   }
 }
 
@@ -248,83 +317,25 @@ Chapitre 2
   #chapitre-no7 {
     background-image: url("../img/img_arriere_plan/temple_eau_1920_1080.png");
   }
-  .top{
-    width: 0; 
+  .top {
+    width: 0;
   }
-  .mid{
-    width: 0; 
+  .mid {
+    width: 0;
   }
-  .bottom{
-    width: 0; 
+  .bottom {
+    width: 0;
   }
 }
-
 
 #chapitre-no8 {
   background-image: url("../img/img_arriere_plan/bottom_sea.png");
   position: relative;
 }
 
-
-/*------------------------------------------------------------------
-Sprite Sheet
---------------------------------------------------------------------*/ 
-
-.exo, .exo2 {
-  height: 200vh;
-}
-.sprite {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url(../img/img_personnages/diver_ss.png);
-  height: 502px;
-  width: 502px;
-  animation: exo 1s infinite steps(48) paused;
-
-}
-.sprite2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url(../img/img_personnages/bird_ss.png);
-  height: 500px;
-  width: 500px;
-  animation: exo2 1s infinite steps(48) paused;
-
-}
-@keyframes exo {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 24096px 0;
-  }
-}
-
-@keyframes exo2 {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 24000px 0;
-  }
-}
-
-.is-scrolling .sprite {
-  animation-play-state: running;
-}
-
-.is-scrolling .sprite2 {
-  animation-play-state: running;
-}
-
-
 /*------------------------------------------------------------------
 Footer
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 
 footer p {
   position: relative;
