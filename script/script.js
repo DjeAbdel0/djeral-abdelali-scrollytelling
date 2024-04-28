@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(MorphSVGPlugin);
 
 let timer;
 
