@@ -15,6 +15,12 @@
     <header>
       <h1>Abysses Éclairés</h1>
       <!--Description du projet et des auteurs-->
+      <img
+        src="./img/img_elemts_visuels/tortue.png"
+        alt="étoile"
+        class="personnage"
+      />
+      <!--Description du projet et des auteurs-->
       <p>
         Projet scrollytelling créé dans le cadre du cours Optimisation Web -
         Intégration multimédia - Collège Montmorency. © 2024 - Conception :
@@ -22,7 +28,7 @@
         Développement Web : Abdel Ali Djeral.
       </p>
       <!-- Appel à l'action pour faire défiler vers le bas -->
-      <div class="ScrollHelpIndicator" style="opacity: 1">
+      <div class="descends" style="opacity: 1">
         <svg
           width="80"
           height="80"
@@ -54,9 +60,9 @@
     <!--Main-->
     <main>
       <!--Début Chapitre 1-->
-      <section id="chapitre-no1" >
+      <section id="chapitre-no1">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 1</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -66,60 +72,57 @@
             </ul>
           </li>
         </ul>
-        <h2 class="text">Ca marche</h2>
-        <h2 class="outline-text">Ca marche</h2>
+        <p>
+          Une entité parcours ciels et terres à la rencontre de formes de vies
+        </p>
+      </section>
+      <!--Fin Chapitre 1-->
+
+      <!--P2.2 B - INSTRUCTION 4-->
+      <!--Début Chapitre 2-->
+      <section id="chapitre-no2">
+        <ul class="technique-gsap">
+          <li>Chapitre 2</li>
+          <li>...</li>
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>...</li>
+            </ul>
+          </li>
+        </ul>
+        <h2 class="text">La d/couverte</h2>
+        <h2 class="outline-text">La d/couverte</h2>
         <div class="parralax">
           <img
             src="./img/img_arriere_plan/parallax/mont_gauche.png"
             alt="mont_gauche"
             class="mont-gauche"
           />
-          
           <img
             src="./img/img_arriere_plan/parallax/srbres.png"
             alt="arbres"
             class="arbres"
           />
-          
           <img
             src="./img/img_arriere_plan/parallax/monts_droite.png"
             alt="mont_droite"
             class="mont-droite"
           />
-          
         </div>
         <p>
-          Une entité parcours ciels et terre à la rencontre de formes de vies
+          Une forêt entourée de grandes montagnes semble cacher de grands
+          mystères
         </p>
       </section>
-      <!--Fin Chapitre 1-->
-
-      <!--Début Chapitre 2-->
-      <section id="chapitre-no2">
-        <ul class="technique-gsap">
-          <li>...</li>
-          <li>...</li>
-          <li>
-            scrollTrigger
-            <ul>
-              <li>trigger=</li>
-              <li>...</li>
-            </ul>
-          </li>
-        </ul>
-          <div class="ss-diver"></div>
-        <p>
-          Une longue rivière entouré d'une chaîne de montagnes attire son
-          attention
-        </p>
-      </section>
-
       <!--Fin Chapitre 2-->
 
+      <!--P2.2 B - INSTRUCTION 4-->
       <!--Début Chapitre 3-->
       <section id="chapitre-no3">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 3</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -129,15 +132,15 @@
             </ul>
           </li>
         </ul>
-        
-        <p>Le calme avant la tempête</p>
+        <div class="ss-oiseau"></div>
+        <p>Une longue rivière aux eaux troubles attire son attention</p>
       </section>
       <!--Fin Chapitre 3-->
 
       <!--Début Chapitre 4-->
       <section id="chapitre-no4">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 4</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -148,13 +151,37 @@
           </li>
         </ul>
         <p>Est-ce un moyen de déplacement d'une civilisation?</p>
+         <!--Morphing (Marche sur codePen)-->
+        <svg 
+          version="1.1"
+          id="svg2"
+          inkscape:version="0.91 r13725"
+          x="0px"
+          y="0px"
+          viewBox="9 80 800 400"
+          style="enable-background: new 9 80 800 400"
+          xml:space="preserve"
+        >
+          <path
+            id="cercle"
+            class="st1"
+            d="M490.1,280.649c0,44.459-36.041,80.5-80.5,80.5s-80.5-36.041-80.5-80.5s36.041-80.5,80.5-80.5
+	S490.1,236.19,490.1,280.649z"
+          />
+
+          <path
+            id="poisson"
+            class="st2"
+            d="M274.7,177.7c3.8,0.8,7.7,1.6,11.5,2.4c0.5,0,0.9,0.1,1.3,0.2c7.5,1.6,14.8,3.2,22.2,4.8   c11.4,2.4,22.8,4.9,34.2,7.1c5.6,1,11.5,2.1,17.5,2.6c4.5-6.6,9.4-11.5,14.9-13c-3.8,3.7-7.4,8.2-10.6,13.5   c5.5,0.5,11,0.5,16.4-0.3c3-6.6,6.7-11.6,11.4-14c-2.6,3.8-4.9,8.4-7,13.3l0.6-0.1c5.9-1.3,11.8-3.4,17.7-6.3   c1.6-7.6,4.3-13.8,8.6-17.2c-2,4.5-3.3,9.5-4.4,14.9c19.1-10.2,37.3-26.9,49.7-41.2c3.3-3.8,8.9-9,14.1-5.7   c5.5,3.4,2.9,10.6,0.8,15.2c-3.2,7.4-6.8,14.5-9.9,21.8c-1.5,3.6-3.2,8-2.9,12c0.8,8.6,14.7,20,20.7,25.2   c3.8,3.2,10.5,8.5,7.2,14.3c-3.1,5.5-10.2,3-14.7,1.5c-8.2-2.9-16-6.1-23.9-9.3c-5.3-2.2-10.7-4.4-16.3-5.5   c-6.4-1.2-13-0.7-19.4,0.8c4,4.5,8.3,8.3,12.5,11.2c-5.5-0.6-11.3-4.4-16.8-10.1c-4.3,1.3-8.5,2.8-12.5,4.3   c-1.6,0.7-3.3,1.3-4.9,1.8c4.9,3.8,10,6.8,14.8,8.7c-5.7,0.6-12.4-2.3-19.3-7c-5.9,2.2-12.2,4.4-18.7,6.7c4.9,2.9,9.9,5.2,14.6,6.7   c-5.6,1.1-12.3-1-19.4-5.1c-6.9,2.4-14.1,4.7-21.5,7c1.6,2.6,2.9,5.4,2.2,8.7c-1.1,5.6-7.4,7.5-12.3,8.4s-10.6,1-15.6,1.1   c-6.6,0.2-13.2,0.1-19.8-0.1c-6.7-0.2-13.3-0.5-20-0.8c-9.9,2.1-19.9,4-29.8,5.5c0.2,2,0,4-0.9,6c-3,6.4-10.7,8-17,6.9   c-6.1-1.1-12.3-4.3-16.4-8.9c-29.2,2.1-57.3,0.6-81.4-6.6h-0.2c-15.9-3.7-31.9-8.7-44.6-19.3c-2.5-2-4.1-4.9-3.9-8.3   c0.6-5.4,5.6-8,10.5-8.9c1.2-0.1,2.3-0.2,3.6-0.2c2-4.8,5.3-9.1,8.7-13c21-24.5,49.3-35.5,79.3-39c1-1.7,2.3-3.3,3.7-4.7   c5.6-6.1,13-14.8,20.6-18.3c6.3-2.9,12.9-0.9,15.2,6c0.7,2,1.6,3.2,3.2,4.5c4,3.1,10.8,4.8,15.8,5.6c9.2,1.7,19.2,4.8,26.9,10.5   C272.1,175.1,273.5,176.3,274.7,177.7L274.7,177.7z M333.9,196.5c-0.1,0-0.1-0.1-0.2-0.1c-2.4-0.6-4.9-1-7.6-1.6   c0.3,0.5,0.6,0.8,0.8,1.3c1.7,2.8,3.2,6,3.8,9c0.3,1.5-0.6,3-2.2,3.3c-1.5,0.3-3.1-0.7-3.3-2.2c-0.5-2.3-1.7-4.8-3.1-7.1   c-1.8-2.9-3.8-5.3-4.8-6c-0.1-0.1-0.2-0.1-0.3-0.2l-7.4-1.6c0.3,0.5,0.6,1,0.9,1.6c1.7,3.4,3.2,7.6,4.1,12.2   c0.3,1.5-0.7,3.1-2.2,3.3c-1.6,0.3-3.1-0.7-3.4-2.2c-0.8-4-2.2-7.8-3.7-10.8c-1.4-2.9-3-4.9-4.4-6c-2.6-0.6-5.3-1.2-8.2-1.7   c0.7,1.3,1.3,2.6,1.8,4.3c1.4,3.8,2.4,8.5,2.8,13.7c0.1,1.6-1.1,2.9-2.8,3c-1.5,0.1-2.9-1.1-3-2.6c-0.2-4.7-1.1-8.7-2.4-12.1   c-1.1-3.3-2.6-6-4.1-7.8c-3.2-0.7-6.4-1.4-9.8-2.1c0.9,1.4,1.6,2.9,2.3,4.5c1.8,4.3,3.2,9.7,3.6,15.8c0,1.5-1.1,2.9-2.8,3   c-1.6,0.1-2.9-1.2-3-2.8c-0.3-5.4-1.5-10-3.1-13.7c-1.7-4.3-3.9-7.1-6-8.6c-1.8-0.3-3.7-0.7-5.5-1c-2.5-0.6-5.1-1-7.7-1.5   c0.6,0.8,1,1.5,1.6,2.3c2.8,4.3,5.2,9.2,6.2,12.4c2.2,6.8,1.1,8.5,1.1,8.5c-0.7,1.4-2.4,2-3.8,1.3c-1.5-0.7-2.1-2.4-1.4-3.8   c0,0,0,0-1.4-4.3c-0.9-2.8-3.1-7.1-5.6-11c-1.8-2.8-3.9-5.4-5.6-6.8c-3.8-0.6-7.7-1-11.6-1.5c0.9,1.3,1.8,2.5,2.8,3.9   c2.9,4.3,5.3,9.2,6.3,12.4c2.1,6.8,1,8.5,1,8.5c-0.7,1.4-2.4,2-3.8,1.3c-1.4-0.7-2-2.4-1.3-3.8c0,0-0.1,0-1.5-4.3   c-0.8-2.8-3-7.1-5.6-11c-2.1-3.1-4.3-6-6.1-7.2c-0.3-0.1-0.5-0.3-0.7-0.6c-3.4-0.2-7-0.5-10.5-0.6c0.9,1.3,2,2.6,2.9,4   c2.8,4.3,5.2,9.2,6.2,12.4c2.2,6.8,1.1,8.5,1.1,8.5c-0.7,1.4-2.4,2-3.9,1.3c-1.4-0.7-2-2.4-1.3-3.8c0,0-0.1,0-1.4-4.3   c-0.9-2.8-3.1-7.1-5.6-11c-2.1-3.1-4.3-5.9-6.1-7.1c-35.6,0.2-70.4,9.7-94.8,38.1c-3,3.4-5.4,6.6-7,9.7c7.4,1.5,14.8,5.3,20.6,9   c8.2,5.3,22.2,9.5,31.5,2.4c-7.7,10.8-25.1,8.7-34.7,2.5c-6.4-4.1-17.6-9.9-26.2-8.4c-5.9,1-6.8,4.3-3.8,6.8   c12.5,10.2,28.6,14.8,42.3,17.9l0,0l0.1,0.1c32.8,7.4,64.2-9.5,68-34.3c2.3-15.8-4.7-27.9-16-36.3c13.7,3.2,21,15.4,22.1,28.3   c6.9-0.8,14.4-0.8,21.4-0.6c16,0.2,32.3,1.6,48.3,3.1c29.9,2.9,67.3,4.6,89-5.6c-5.1,6.8-16.8,10-30.1,11.5   c-15.6,1.7-35.4,2.3-59.5,0c-43.1-4-61.5-3.3-69.1-2.4l0,0c-0.3,3.7-1,7.4-2.4,10.8c-4.8,12.9-15.8,22.3-28.2,27.6   c-3.9,1.7-8,3-12.3,3.9c14.4,1.5,29.6,1.6,45.2,0.7c-1.1-2.5-1.7-5.2-1.6-8c2.6,7.9,13.7,13.8,19.9,15.9c13,4.4,20.4-5.6,7-14.5   c-6.1-3.9-12.5-8.5-22.7-7.6c10.1-5.9,26.3,0.3,32.5,8.7c0.3,0.5,0.7,0.9,0.9,1.5c53.8-8.3,109-26.1,149.8-41.6   c39-14.8,43.7-4.1,80.5,8.6c10.6,3.7,9.2,0.8,1.6-5.6c-32.5-28.1-24.8-30.7-9.4-65.8c5.1-11.6-0.6-8.4-5.1-3.3   C445.1,169,416,194,388.3,200c-12.8,2.9-26,1.7-45.3-1.8c1.3,2.1,2.4,4.5,3,7.2c0.3,1.5-0.7,3.1-2.3,3.3c-1.5,0.3-3-0.6-3.3-2.2   c-0.5-2.2-1.4-4-2.3-5.6C336.7,198.8,335.1,197.3,333.9,196.5L333.9,196.5z M188.8,222.8c5.3-16.1-1.4-31.7-14.7-41.6   C192.1,185.4,200.5,206.6,188.8,222.8L188.8,222.8z M150.8,205.6c4.9,0,9,4,9,9c0,4.8-4,8.9-9,8.9c-4.8,0-8.9-4-8.9-8.9   C142,209.7,146,205.6,150.8,205.6L150.8,205.6z M150.8,211.6c1.7,0,3,1.4,3,3c0,1.6-1.3,3-3,3c-1.6,0-2.9-1.4-2.9-3   C148,213,149.2,211.6,150.8,211.6L150.8,211.6z M337.3,240.6c-12.2,3.7-24.8,7.2-37.8,10.5c13,0.3,25.8,0.2,32.4-1   C342.2,248.2,340.1,245.2,337.3,240.6L337.3,240.6z M193.4,169.8c22.4-1.5,45.7,1,67.3,5.2c-4.4-2.1-10.2-4.1-17.9-5.5   c-19-3.4-22.1-10.1-23.5-14.1c-1.2-3.1-3.6-4-7.2-2.4C206.3,155.5,200.5,162.2,193.4,169.8L193.4,169.8z"
+          ></path>
+        </svg>
       </section>
       <!--Fin Chapitre 4-->
 
       <!--Début Chapitre 5-->
       <section id="chapitre-no5">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 5</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -164,17 +191,16 @@
             </ul>
           </li>
         </ul>
-        
-          <div class="ss-diver"></div>
-     
+
         <p>La flore marine semble s'approcher de l'entitée</p>
       </section>
       <!--Fin Chapitre 5-->
 
+      <!--P2.2 B - INSTRUCTION 4-->
       <!--Début Chapitre 6-->
       <section id="chapitre-no6">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 6</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -184,14 +210,21 @@
             </ul>
           </li>
         </ul>
-        <p>Une île au regard perçant</p>
+        <div class="sprite">
+          <div class="ss-diver"></div>
+        </div>
+        <p>
+          Une créature recouverte d'un drôle de costumes semble fuir
+          quelquechose
+        </p>
       </section>
       <!--Fin Chapitre 6-->
 
+      <!--P2.2 B - INSTRUCTION 4-->
       <!--Début Chapitre 7-->
       <section id="chapitre-no7">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 7</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -201,19 +234,31 @@
             </ul>
           </li>
         </ul>
-       
-        <p>
-          Un temple près d'une grotte remplie de coraux semble étrangement
-          familier
-        </p>
-      
+        <div class="bateau">
+          <img
+            src="./img/img_elemts_visuels/compose_top.png"
+            class="bat-top"
+            alt="bateau top"
+          />
+          <img
+            src="./img/img_elemts_visuels/compose_mid.png"
+            class="bat-mid"
+            alt="bateau mid"
+          />
+          <img
+            src="./img/img_elemts_visuels/compose_bottom.png"
+            class="bat-bottom"
+            alt="bateau bottom"
+          />
+        </div>
+        <p>la gravité agit différement ici...</p>
       </section>
       <!--Fin Chapitre 7-->
 
       <!--Début Chapitre 8-->
       <section id="chapitre-no8">
         <ul class="technique-gsap">
-          <li>...</li>
+          <li>Chapitre 8</li>
           <li>...</li>
           <li>
             scrollTrigger
@@ -223,10 +268,7 @@
             </ul>
           </li>
         </ul>
-        <p>
-          Un tableau du fond de l'eau contient des illustrations qui lui
-          rappellent des souvenirs qui étaient si profondement enfouis
-        </p>
+        <p>Voici enfin le fond! Y'a-t-il d'autres mystères à découvrir?</p>
       </section>
       <!--Fin Chapitre 8-->
     </main>
