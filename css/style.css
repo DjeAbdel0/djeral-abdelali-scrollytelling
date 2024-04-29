@@ -298,7 +298,7 @@ Chapitre 4
 /*Morphing (Marche sur codePen) */
 svg {
   display:none;
-  position:relative;
+  position:absolute;
   display: block;
   margin: 20px auto;
   width:700px;
@@ -315,6 +315,10 @@ Chapitre 5
   background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
+.chemin{
+  display: none;
+}
+
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
@@ -323,7 +327,8 @@ Chapitre 6
 }
 
 .ss-diver {
-  position: relative;
+  position: absolute;
+  top: 20vh;
   background-image: url("../img/img_personnages/diver_ss.png");
   width: 502px;
   height: 502px;

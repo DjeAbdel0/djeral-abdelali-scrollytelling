@@ -1,4 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
+/*
+gsap.registerPlugin(MorphSVGPlugin);
+*/
 
 let timer;
 
@@ -115,24 +118,23 @@ Chapitre 6
 /*---Sprite Sheet Diver---*/
 const diver = gsap.timeline({
   scrollTrigger: {
-    trigger: ".ss-diver",
-    start: "top 20%",
+    trigger: "#chapitre-no6",
+    start: "top top",
     end: "bottom top",
     scrub: true,
+    pin:true,
     markers: false,
   },
 });
 diver
 .to(".ss-diver", {
   x: "30vw",
-  y: "30vh"
 })
 .to(".ss-diver", {
   x: "50vw",
 }, "<")
 .to(".ss-diver", {
   x: "80vw",
-  y: "51vh"
 }, "<")
 .to(".ss-diver", {
   x: "100vw",
