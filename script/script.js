@@ -27,18 +27,17 @@ Header
 gsap.to(".personnage", {
   scrollTrigger: {
     trigger: ".personnage",
-    start: "top top",      
-    end: "bottom bottom",   
-    scrub: true,          
-    markers: false,     
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    markers: false,
   },
-  y: "25vh"              
+  y: "25vh",
 });
 
 /*------------------------------------------------------------------
 Chapitre 1
 --------------------------------------------------------------------*/
-
 
 /*------------------------------------------------------------------
 Chapitre 2
@@ -87,18 +86,24 @@ const oiseau = gsap.timeline({
     scrub: true,
   },
 });
-oiseau
-.to(".ss-oiseau", { x: "65vw" },0)
+oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 /*------------------------------------------------------------------
 Chapitre 4 Morphing (Marche sur codePen)
 --------------------------------------------------------------------*/
-var morph = gsap.to("#cercle", { duration: 1, morphSVG:"#poisson", repeat:10, yoyo:true, repeatDelay:0.2})
+var morphTimeline = gsap.timeline({ repeat: 10, repeatDelay: 0.2 });
+
+// First morph
+morphTimeline.to("#cercle", { duration: 2, morphSVG: "#poisson" });
+
+// Second morph
+morphTimeline.to("#cercle", { duration: 2, morphSVG: "#poisson2" });
+
 /*------------------------------------------------------------------
 Chapitre 5
 --------------------------------------------------------------------*/
 
-const path = document.querySelector('.chemin');
-const circle = document.querySelector('.cercle');
+const path = document.querySelector(".chemin");
+const circle = document.querySelector(".cercle");
 
 const val = { distance: 0 };
 
@@ -108,9 +113,9 @@ gsap.to(val, {
   duration: 5,
   onUpdate: () => {
     const point = path.getPointAtLength(val.distance);
-    circle.setAttribute('cx', point.x);
-    circle.setAttribute('cy', point.y);
-  }
+    circle.setAttribute("cx", point.x);
+    circle.setAttribute("cy", point.y);
+  },
 });
 /*------------------------------------------------------------------
 Chapitre 6
@@ -122,25 +127,35 @@ const diver = gsap.timeline({
     start: "top top",
     end: "bottom top",
     scrub: true,
-    pin:true,
+    pin: true,
     markers: false,
   },
 });
 diver
-.to(".ss-diver", {
-  x: "30vw",
-})
-.to(".ss-diver", {
-  x: "50vw",
-}, "<")
-.to(".ss-diver", {
-  x: "80vw",
-}, "<")
-.to(".ss-diver", {
-  x: "100vw",
-}, "<")
-
-
+  .to(".ss-diver", {
+    x: "30vw",
+  })
+  .to(
+    ".ss-diver",
+    {
+      x: "50vw",
+    },
+    "<"
+  )
+  .to(
+    ".ss-diver",
+    {
+      x: "80vw",
+    },
+    "<"
+  )
+  .to(
+    ".ss-diver",
+    {
+      x: "100vw",
+    },
+    "<"
+  );
 
 /*------------------------------------------------------------------
 Chapitre 7
@@ -157,9 +172,7 @@ const bateau = gsap.timeline({
     duration: 8,
   },
 });
-bateau
-.to(".bat-top", { y: "-150px" },0)
-.to(".bat-bottom", { y: "150px" },0)
+bateau.to(".bat-top", { y: "-150px" }, 0).to(".bat-bottom", { y: "150px" }, 0);
 
 /*------------------------------------------------------------------
 Chapitre 8
