@@ -21,6 +21,11 @@ Styles generaux
   src: url(../fonts/VerelaRound/VarelaRound-Regular.ttf);
 }
 
+
+* {
+  outline: red dashed 2px;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -254,6 +259,15 @@ Chapitre 2
   z-index: 4;
 }
 
+.cachePara{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  bottom: -25vh;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  background: radial-gradient(at top bottom, rgb(0, 0, 0), rgb(54, 243, 25));
+}
 /*------------------------------------------------------------------
 Chapitre 3
 --------------------------------------------------------------------*/

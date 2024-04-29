@@ -27,13 +27,18 @@ gsap.to(".personnage", {
     start: "top top",      
     end: "bottom bottom",   
     scrub: true,          
-    markers: true,     
+    markers: false,     
   },
   y: "25vh"              
 });
 
 /*------------------------------------------------------------------
 Chapitre 1
+--------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+Chapitre 2
 --------------------------------------------------------------------*/
 /*---Anim Text---*/
 gsap.from(".text, .outline-text", {
@@ -51,21 +56,21 @@ gsap.from(".text, .outline-text", {
 const parallax = gsap.timeline({
   scrollTrigger: {
     trigger: ".parralax",
-    start: "250vh 15%",
+    start: "top 50%",
     end: "bottom top",
     markers: true,
     duration: 5,
+    scrub: 1,
   },
 });
 
 parallax
-  .to(".mont-droite", { y: -200 },0)
-  .to(".mont-gauche", { y: -200 },0)
-  .to(".arbres", { y: -200 },0)
+  .to(".mont-droite", { y: -200 }, "<")
+  .to(".mont-gauche", { y: -200 }, "<0.25")
+  .to(".arbres", { y: -200 }, "<0.5")
   .to("#chapitre-no2", { backgroundPositionY: "20%", ease: "none" }, 0);
-
 /*------------------------------------------------------------------
-Chapitre 2
+Chapitre 3
 --------------------------------------------------------------------*/
 /*---Sprite Sheet Oiseau---*/
 
@@ -76,15 +81,11 @@ const oiseau = gsap.timeline({
     end: "bottom top",
     scrub: 1,
     markers: false,
+    scrub: true,
   },
 });
 oiseau
 .to(".ss-oiseau", { x: "65vw" },0)
-
-/*------------------------------------------------------------------
-Chapitre 3
---------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------
 Chapitre 4 Morphing (Marche sur codePen)
 --------------------------------------------------------------------*/
@@ -118,7 +119,7 @@ const diver = gsap.timeline({
     start: "top 20%",
     end: "bottom top",
     scrub: true,
-    markers: true,
+    markers: false,
   },
 });
 diver
