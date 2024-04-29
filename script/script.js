@@ -93,6 +93,21 @@ var morph = gsap.to("#cercle", { duration: 1, morphSVG:"#poisson", repeat:10, yo
 Chapitre 5
 --------------------------------------------------------------------*/
 
+const path = document.querySelector('.chemin');
+const circle = document.querySelector('.cercle');
+
+const val = { distance: 0 };
+
+gsap.to(val, {
+  distance: path.getTotalLength(),
+  repeat: -1,
+  duration: 5,
+  onUpdate: () => {
+    const point = path.getPointAtLength(val.distance);
+    circle.setAttribute('cx', point.x);
+    circle.setAttribute('cy', point.y);
+  }
+});
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
@@ -134,6 +149,7 @@ const bateau = gsap.timeline({
     start: "top 30%",
     end: "bottom top",
     scrub: 1,
+    pin: true,
     markers: false,
     duration: 8,
   },
