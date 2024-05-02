@@ -31,7 +31,7 @@ ul.technique-gsap {
   background: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 10px;
-  font-family: monospace;
+  font-family: "varela";
   font-weight: 400;
   width: auto;
   display: inline-block;
@@ -169,6 +169,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 }
 
 section p {
@@ -194,7 +195,31 @@ Chapitre 1
     rgba(80, 55, 96, 255)
   );
 }
+.planePath {
+  visibility: hidden;
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
 
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
 /*------------------------------------------------------------------
 Chapitre 2
 --------------------------------------------------------------------*/
@@ -258,13 +283,8 @@ Chapitre 2
   width: 100vw;
   height: 50vh;
   bottom: -25vh;
-  z-index: 10000;
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(
-    at top bottom,
-    rgb(247, 229, 229),
-    rgb(54, 243, 25)
-  );
+  z-index: 1;
+  background: linear-gradient(#000000, #120805);
 }
 /*------------------------------------------------------------------
 Chapitre 3
@@ -296,14 +316,9 @@ Chapitre 4
 
 .morphing {
   position: relative;
-  margin: 0 auto;
-  display: block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  outline: 2px dashed red;
-  transform: translate(50%, 40%); /* Vertically center */
+  top: 50%;
+  transform: translate(50%, 40%); 
+  outline: red dashed 2px;
 }
 
 
@@ -313,6 +328,8 @@ Chapitre 4
 #ancre {
   visibility: hidden;
   outline: 2px dashed red;
+  position: absolute;
+  top: 50%;
 }
 /*------------------------------------------------------------------
 Chapitre 5
@@ -321,8 +338,10 @@ Chapitre 5
   background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
-.chemin {
-  display: none;
+
+.chemin, .tortue {
+  visibility:visible;
+  outline: red dashed 2px;
 }
 
 /*------------------------------------------------------------------
@@ -389,6 +408,24 @@ Chapitre 8
 #chapitre-no8 {
   background-image: url("../img/img_arriere_plan/bottom_sea.png");
   position: relative;
+}
+
+.text-fond {
+  position: absolute;
+  left: 40vw;
+  margin: 40vh auto;
+}
+
+.lettres {
+  text-align: center;
+  font-size: 8vh;
+  
+}
+
+.lettres span {
+  display: inline-block;
+  font-size: 10vh;
+  color: #fff;
 }
 
 /*------------------------------------------------------------------

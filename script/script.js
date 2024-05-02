@@ -23,25 +23,26 @@ window.addEventListener("scroll", handleScroll);
 /*------------------------------------------------------------------
 Header
 --------------------------------------------------------------------*/
-/*---Personnage---*/
-gsap.to(".personnage", {
-  scrollTrigger: {
-    trigger: ".personnage",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: true,
-    markers: false,
-  },
-  y: "25vh",
-});
 
 /*------------------------------------------------------------------
 Chapitre 1
 --------------------------------------------------------------------*/
 
+// Animation de l'avion avec GSAP
+gsap.to("#plane", {
+  duration: 5,
+  repeat: -1,
+  motionPath: {
+      path: "#planePath",
+      align: "#planePath",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5]
+  },
+});
 /*------------------------------------------------------------------
 Chapitre 2
 --------------------------------------------------------------------*/
+
 /*---Anim Text---*/
 gsap.from(".text, .outline-text", {
   scrollTrigger: {
@@ -54,7 +55,6 @@ gsap.from(".text, .outline-text", {
 });
 
 /*---Parallax---*/
-
 const parallax = gsap.timeline({
   scrollTrigger: {
     trigger: ".parralax",
@@ -74,8 +74,8 @@ parallax
 /*------------------------------------------------------------------
 Chapitre 3
 --------------------------------------------------------------------*/
-/*---Sprite Sheet Oiseau---*/
 
+/*---Sprite Sheet Oiseau---*/
 const oiseau = gsap.timeline({
   scrollTrigger: {
     trigger: ".ss-oiseau",
@@ -87,14 +87,16 @@ const oiseau = gsap.timeline({
   },
 });
 oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
+
 /*------------------------------------------------------------------
 Chapitre 4 Morphing (Marche sur codePen)
 --------------------------------------------------------------------*/
+
 let morphTl = gsap.timeline({
   repeatDelay: 0.3,
   defaults: {
     duration: 3,
-    
+    transformOrigin: "10% 20%"
   },
   scrollTrigger: {
     transformOrigin: "center center",
@@ -109,30 +111,37 @@ let morphTl = gsap.timeline({
 
 morphTl
 .to("#cercle", { morphSVG: {shape:"#pieuvre", shapeIndex: 17}, scale: 0.1 }) 
-.to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 });  
+.to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 })
+/*.to(".morphing", { rotate: 180 }, "<5")*/
 
 /*------------------------------------------------------------------
 Chapitre 5
 --------------------------------------------------------------------*/
 
 const path = document.querySelector(".chemin");
-const circle = document.querySelector(".cercle");
+const tortue = document.querySelector(".tortue");
 
-const val = { distance: 0 };
+if (path && tortue) {
+  const val = { distance: 0 };
 
-gsap.to(val, {
-  distance: path.getTotalLength(),
-  repeat: -1,
-  duration: 5,
-  onUpdate: () => {
-    const point = path.getPointAtLength(val.distance);
-    circle.setAttribute("cx", point.x);
-    circle.setAttribute("cy", point.y);
-  },
-});
+  gsap.to(val, {
+    distance: path.getTotalLength(),
+    repeat: -1,
+    duration: 5,
+    onUpdate: () => {
+      const point = path.getPointAtLength(val.distance);
+      tortue.setAttribute("cx", point.x);
+      tortue.setAttribute("cy", point.y);
+    },
+  });
+} else {
+  console.error("Path or tortue element not found.");
+}
+
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
+
 /*---Sprite Sheet Diver---*/
 const diver = gsap.timeline({
   scrollTrigger: {
@@ -185,8 +194,34 @@ const bateau = gsap.timeline({
     duration: 8,
   },
 });
+
 bateau.to(".bat-top", { y: "-150px" }, 0).to(".bat-bottom", { y: "150px" }, 0);
 
 /*------------------------------------------------------------------
 Chapitre 8
 --------------------------------------------------------------------*/
+
+gsap.fromTo('.lettres span', {
+  x: "50vw",
+  opacity: 0,
+},
+{
+delay: 2, 
+duration: 1,
+x: 0,
+opacity: 1,
+ease: 'power2.easeOut',
+stagger: {
+  from: 'start',
+  amount: 0.5, 
+},
+scrollTrigger: {
+  trigger: "#chapitre-no8",
+  start: "top top",
+  end: "bottom top",
+  scrub: 1,
+  pin: true,
+  markers: false,
+  duration: 8,
+},
+})
