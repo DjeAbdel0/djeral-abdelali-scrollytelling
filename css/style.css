@@ -21,11 +21,6 @@ Styles generaux
   src: url(../fonts/VerelaRound/VarelaRound-Regular.ttf);
 }
 
-
-* {
-  outline: red dashed 2px;
-}
-
 body {
   overflow-x: hidden;
   margin: 0;
@@ -66,7 +61,7 @@ header {
   background-repeat: no-repeat;
 }
 
-.personnage{
+.personnage {
   position: absolute;
   width: 125px;
   height: 100px;
@@ -195,11 +190,10 @@ Chapitre 1
 --------------------------------------------------------------------*/
 #chapitre-no1 {
   background-image: linear-gradient(
-    rgba(74,35,133,255),
-    rgba(80,55,96,255)
+    rgba(74, 35, 133, 255),
+    rgba(80, 55, 96, 255)
   );
 }
-
 
 /*------------------------------------------------------------------
 Chapitre 2
@@ -259,14 +253,18 @@ Chapitre 2
   z-index: 4;
 }
 
-.cachePara{
+.cachePara {
   position: absolute;
   width: 100vw;
   height: 50vh;
   bottom: -25vh;
-  z-index: 1;
+  z-index: 10000;
   background-color: rgb(0, 0, 0);
-  background: radial-gradient(at top bottom, rgb(0, 0, 0), rgb(54, 243, 25));
+  background: linear-gradient(
+    at top bottom,
+    rgb(247, 229, 229),
+    rgb(54, 243, 25)
+  );
 }
 /*------------------------------------------------------------------
 Chapitre 3
@@ -292,21 +290,29 @@ Chapitre 4
 #chapitre-no4 {
   background-image: linear-gradient(
     rgba(40, 10, 15, 255),
-    rgba(60,187,220,255)
+    rgba(60, 187, 220, 255)
   );
 }
-/*Morphing (Marche sur codePen) */
-svg {
-  display:none;
-  position:absolute;
+
+.morphing {
+  position: relative;
+  margin: 0 auto;
   display: block;
-  margin: 20px auto;
-  width:700px;
-  max-height: 70vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 2px dashed red;
+  transform: translate(50%, 40%); /* Vertically center */
 }
 
-#poisson{
-  visibility:hidden;
+
+
+#poisson,
+#pieuvre,
+#ancre {
+  visibility: hidden;
+  outline: 2px dashed red;
 }
 /*------------------------------------------------------------------
 Chapitre 5
@@ -315,7 +321,7 @@ Chapitre 5
   background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
-.chemin{
+.chemin {
   display: none;
 }
 
@@ -340,18 +346,22 @@ Chapitre 6
 Chapitre 7
 --------------------------------------------------------------------*/
 #chapitre-no7 {
-background: rgba(36,98,149,255);
-background: radial-gradient(at center bottom, rgba(36,98,149,255), rgba(114,205,253,255));
-height: 200vh;
+  background: rgba(36, 98, 149, 255);
+  background: radial-gradient(
+    at center bottom,
+    rgba(36, 98, 149, 255),
+    rgba(114, 205, 253, 255)
+  );
+  height: 200vh;
 }
 
 .bateau {
   position: relative;
   left: 22%;
-  top: 60vh;        
+  top: 60vh;
 }
 
-.bat-top{
+.bat-top {
   position: absolute;
   top: -30px;
   left: 650px;
@@ -359,14 +369,14 @@ height: 200vh;
   outline: red dashed 2px;
 }
 
-.bat-mid{
+.bat-mid {
   position: absolute;
   top: 230px;
   left: 525px;
   width: 400px;
 }
 
-.bat-bottom{
+.bat-bottom {
   position: absolute;
   top: 325px;
   left: 400px;
@@ -380,8 +390,6 @@ Chapitre 8
   background-image: url("../img/img_arriere_plan/bottom_sea.png");
   position: relative;
 }
-
-
 
 /*------------------------------------------------------------------
 Sprite Sheets Animations

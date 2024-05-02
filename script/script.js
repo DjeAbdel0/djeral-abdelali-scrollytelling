@@ -60,7 +60,7 @@ const parallax = gsap.timeline({
     trigger: ".parralax",
     start: "top 50%",
     end: "bottom top",
-    markers: true,
+    markers: false,
     duration: 5,
     scrub: 1,
   },
@@ -90,13 +90,26 @@ oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 /*------------------------------------------------------------------
 Chapitre 4 Morphing (Marche sur codePen)
 --------------------------------------------------------------------*/
-var morphTimeline = gsap.timeline({ repeat: 10, repeatDelay: 0.2 });
+let morphTl = gsap.timeline({
+  repeatDelay: 0.3,
+  defaults: {
+    duration: 3,
+    
+  },
+  scrollTrigger: {
+    transformOrigin: "center center",
+    trigger: "#chapitre-no4",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+    markers: true,
+  },
+});
 
-// First morph
-morphTimeline.to("#cercle", { duration: 2, morphSVG: "#poisson" });
-
-// Second morph
-morphTimeline.to("#cercle", { duration: 2, morphSVG: "#poisson2" });
+morphTl
+.to("#cercle", { morphSVG: {shape:"#pieuvre", shapeIndex: 17}, scale: 0.1 }) 
+.to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 });  
 
 /*------------------------------------------------------------------
 Chapitre 5
