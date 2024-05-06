@@ -174,8 +174,8 @@ section {
 
 section p {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  right: 0;
   width: 40vw;
   background-color: var(--fond_texte);
   padding: 1.5vh 1.5vw;
@@ -197,15 +197,11 @@ Chapitre 1
 }
 .cheminChap1 {
   visibility: visible;
-  stroke: #D9DADA;
-  stroke-width: .5vw;
-  stroke-width: 2.5vw;
-  stroke-dasharray: 5vw 10vw;
-  stroke-linecap: round;
-  fill: none;
-  left: 50vw;
-  position: absolute;
-  top: 50%;
+}
+
+#atome {
+  width: 40vw;
+  height: 40vh;
 }
 
 /*------------------------------------------------------------------
@@ -405,7 +401,12 @@ Chapitre 8
   
 }
 
-.lettres span {
+.lettres-bas {
+  text-align: center;
+  font-size: 8vh;
+} 
+
+.lettres span, .lettres-bas span {
   display: inline-block;
   font-size: 10vh;
   color: #fff;

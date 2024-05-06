@@ -32,6 +32,7 @@ Chapitre 1
 gsap.to("#atome", {
   duration: 5,
   repeat: -1,
+  yoyo: true,
   motionPath: {
       path: "#cheminChap1",
       align: "#cheminChap1",
@@ -180,28 +181,37 @@ bateau.to(".bat-top", { y: "-150px" }, 0).to(".bat-bottom", { y: "150px" }, 0);
 /*------------------------------------------------------------------
 Chapitre 8
 --------------------------------------------------------------------*/
+const lettres = gsap.timeline({
+  duration: 1,
+  opacity: 1,
+  ease: 'power2.easeOut',
+  stagger: {
+    from: 'start',
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: "#chapitre-no8",
+    start: "top top",
+    end: "bottom top",
+    scrub: 1,
+    pin: true,
+    markers: false,
+    duration: 8,
+  },
+});
 
-gsap.fromTo('.lettres span', {
-  x: "50vw",
+lettres.fromTo('.lettres span', {
+  x: "50vw", 
   opacity: 0,
-},
-{
-delay: 2, 
-duration: 1,
-x: 0,
-opacity: 1,
-ease: 'power2.easeOut',
-stagger: {
-  from: 'start',
-  amount: 0.5, 
-},
-scrollTrigger: {
-  trigger: "#chapitre-no8",
-  start: "top top",
-  end: "bottom top",
-  scrub: 1,
-  pin: true,
-  markers: false,
-  duration: 8,
-},
-})
+}, {
+  x: "-5vw",
+  opacity: 1,
+});
+
+lettres.fromTo('.lettres-bas span', {
+  x: "-50vw", 
+  opacity: 0,
+}, {
+  x: "-3.5vw",
+  opacity: 1,
+});
