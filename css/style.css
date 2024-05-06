@@ -195,31 +195,19 @@ Chapitre 1
     rgba(80, 55, 96, 255)
   );
 }
-.planePath {
-  visibility: hidden;
+.cheminChap1 {
+  visibility: visible;
   stroke: #D9DADA;
-  stroke-width: .1%;
-  stroke-width: .5%;
-  stroke-dasharray: 1% 2%;
+  stroke-width: .5vw;
+  stroke-width: 2.5vw;
+  stroke-dasharray: 5vw 10vw;
   stroke-linecap: round;
   fill: none;
+  left: 50vw;
+  position: absolute;
+  top: 50%;
 }
 
-.fil1 {
-  fill: #D9DADA;
-}
-
-.fil2 {
-  fill: #C5C6C6;
-}
-
-.fil4 {
-  fill: #9D9E9E;
-}
-
-.fil3 {
-  fill: #AEAFB0;
-}
 /*------------------------------------------------------------------
 Chapitre 2
 --------------------------------------------------------------------*/
@@ -316,8 +304,8 @@ Chapitre 4
 
 .morphing {
   position: relative;
-  top: 50%;
-  transform: translate(50%, 40%); 
+  top: 20vh;
+  left: 20vw;
   outline: red dashed 2px;
 }
 
@@ -329,7 +317,7 @@ Chapitre 4
   visibility: hidden;
   outline: 2px dashed red;
   position: absolute;
-  top: 50%;
+  top: 50vh;
 }
 /*------------------------------------------------------------------
 Chapitre 5
@@ -338,11 +326,6 @@ Chapitre 5
   background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
-
-.chemin, .tortue {
-  visibility:visible;
-  outline: red dashed 2px;
-}
 
 /*------------------------------------------------------------------
 Chapitre 6

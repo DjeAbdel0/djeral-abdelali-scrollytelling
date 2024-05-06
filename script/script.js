@@ -29,12 +29,12 @@ Chapitre 1
 --------------------------------------------------------------------*/
 
 // Animation de l'avion avec GSAP
-gsap.to("#plane", {
+gsap.to("#atome", {
   duration: 5,
   repeat: -1,
   motionPath: {
-      path: "#planePath",
-      align: "#planePath",
+      path: "#cheminChap1",
+      align: "#cheminChap1",
       autoRotate: true,
       alignOrigin: [0.5, 0.5]
   },
@@ -81,7 +81,6 @@ const oiseau = gsap.timeline({
     trigger: ".ss-oiseau",
     start: "top center",
     end: "bottom top",
-    scrub: 1,
     markers: false,
     scrub: true,
   },
@@ -118,25 +117,6 @@ morphTl
 Chapitre 5
 --------------------------------------------------------------------*/
 
-const path = document.querySelector(".chemin");
-const tortue = document.querySelector(".tortue");
-
-if (path && tortue) {
-  const val = { distance: 0 };
-
-  gsap.to(val, {
-    distance: path.getTotalLength(),
-    repeat: -1,
-    duration: 5,
-    onUpdate: () => {
-      const point = path.getPointAtLength(val.distance);
-      tortue.setAttribute("cx", point.x);
-      tortue.setAttribute("cy", point.y);
-    },
-  });
-} else {
-  console.error("Path or tortue element not found.");
-}
 
 /*------------------------------------------------------------------
 Chapitre 6
