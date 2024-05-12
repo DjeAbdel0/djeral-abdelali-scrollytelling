@@ -93,7 +93,7 @@ oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 /*------------------------------------------------------------------
 Chapitre 4 Morphing
 --------------------------------------------------------------------*/
-
+/* Gsap Plugins payants
 let morphTl = gsap.timeline({
   repeatDelay: 0.3,
   defaults: {
@@ -114,12 +114,14 @@ let morphTl = gsap.timeline({
 morphTl
 .to("#cercle", { morphSVG: {shape:"#pieuvre", shapeIndex: 17}, scale: 0.1 }) 
 .to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 })
+*/
 /*.to(".morphing", { rotate: 180 }, "<5")*/
+
 
 /*------------------------------------------------------------------
 Chapitre 5
 --------------------------------------------------------------------*/
-
+/* Gsap Plugins payants
 
 gsap.set("#sirene", {drawSVG: "0% 0%"});
 
@@ -136,6 +138,8 @@ gsap.to("#sirene", {
     scrub: true
   }
 });
+*/ 
+
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
