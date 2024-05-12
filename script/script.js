@@ -1,4 +1,6 @@
+gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(ScrollTrigger);
+
 /*
 gsap.registerPlugin(MorphSVGPlugin);
 */
@@ -89,7 +91,7 @@ const oiseau = gsap.timeline({
 oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 
 /*------------------------------------------------------------------
-Chapitre 4 Morphing (Marche sur codePen)
+Chapitre 4 Morphing
 --------------------------------------------------------------------*/
 
 let morphTl = gsap.timeline({
@@ -119,6 +121,21 @@ Chapitre 5
 --------------------------------------------------------------------*/
 
 
+gsap.set("#sirene", {drawSVG: "0% 0%"});
+
+gsap.to("#sirene", {
+  drawSVG: "0% 100%",
+  duration: 5,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    markers: true,
+    pin: true,
+    trigger: "#chapitre-no5",
+    start: "top top", 
+    end: "bottom top", 
+    scrub: true
+  }
+});
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/

@@ -42,6 +42,7 @@ ul.technique-gsap {
   z-index: 1000;
   top: 0;
   left: 0;
+  display: none;
 }
 
 ul.technique-gsap li {
@@ -68,7 +69,6 @@ header {
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
-  outline: red dashed 2px;
   z-index: 999;
 }
 
@@ -196,7 +196,7 @@ Chapitre 1
   );
 }
 .cheminChap1 {
-  visibility: visible;
+  visibility: hidden;
 }
 
 #atome {
@@ -302,16 +302,12 @@ Chapitre 4
   position: relative;
   top: 20vh;
   left: 20vw;
-  outline: red dashed 2px;
 }
-
-
 
 #poisson,
 #pieuvre,
 #ancre {
   visibility: hidden;
-  outline: 2px dashed red;
   position: absolute;
   top: 50vh;
 }
@@ -322,7 +318,28 @@ Chapitre 5
   background-image: url("../img/img_arriere_plan/plan-eau-1.png");
 }
 
+.sirene-draw {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
 
+ #dessin-sirene,
+#sirene {
+  fill: none;
+}
+
+#dessin-sirene {
+  stroke-width: 0.1px;
+  stroke: #444455;
+  visibility: hidden;
+}
+
+#sirene {
+  stroke: #2ECC71;
+  stroke-width: 0.1px;
+  stroke-dashoffset: 0.001;
+}
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
@@ -364,7 +381,6 @@ Chapitre 7
   top: -30px;
   left: 650px;
   width: 200px;
-  outline: red dashed 2px;
 }
 
 .bat-mid {
@@ -398,15 +414,15 @@ Chapitre 8
 .lettres {
   text-align: center;
   font-size: 8vh;
-  
 }
 
 .lettres-bas {
   text-align: center;
   font-size: 8vh;
-} 
+}
 
-.lettres span, .lettres-bas span {
+.lettres span,
+.lettres-bas span {
   display: inline-block;
   font-size: 10vh;
   color: #fff;
