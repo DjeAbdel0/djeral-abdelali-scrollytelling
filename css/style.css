@@ -431,6 +431,7 @@ Chapitre 8
   display: inline-block;
   font-size: 10vh;
   color: #fff;
+  font-family: "montserrat";
 }
 
 /*------------------------------------------------------------------
@@ -471,4 +472,5 @@ footer p {
   font-size: 10px;
   color: rgb(0, 0, 0); 
   text-align: center;
+  font-family: "montserrat";
 }
