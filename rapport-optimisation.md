@@ -8,8 +8,9 @@
 Redimensionner les images avec PhotoShop, sans qu'elle perdent de leur netteté.
 
 ## Problème #2
-###
-###
+### Le texte n'est pas visible au chargement et le chargement des images augmente le temps de chargement du site
+### Mettre du lazy-loading
+J'ai appliqué le loading="lazy" sur mes images qui chargent au fur à mesure, ce qui augmente la vitesse d'affichage du site
 
 ## Problème #3
 ### Fichiers trop lourds 
