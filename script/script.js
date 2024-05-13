@@ -36,6 +36,7 @@ gsap.to("#atome", {
   duration: 5,
   repeat: -1,
   yoyo: true,
+  toggleActions: "restart pause resume complete",
   motionPath: {
       path: "#cheminChap1",
       align: "#cheminChap1",
