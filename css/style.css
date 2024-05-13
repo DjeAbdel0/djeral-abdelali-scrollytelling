@@ -41,7 +41,6 @@ ul.technique-gsap {
     z-index: 1000;
     top: 0;
     left: 0;
-    display: none;
 }
 
 ul.technique-gsap li {

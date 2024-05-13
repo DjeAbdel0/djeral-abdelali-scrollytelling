@@ -1,10 +1,10 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-/*
+
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MorphSVGPlugin);
-*/
+
 let timer;
 
 /*------------------------------------------------------------------
@@ -99,7 +99,7 @@ oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 /*------------------------------------------------------------------
 Chapitre 4 Morphing
 --------------------------------------------------------------------*/
-/*
+
 let morphTl = gsap.timeline({
   repeatDelay: 0.3,
   repeat: -1,
@@ -122,13 +122,12 @@ morphTl
 .to("#cercle", { morphSVG: {shape:"#pieuvre", shapeIndex: 17}, scale: 0.1 }) 
 .to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 })
 
-*/
+
 
 
 /*------------------------------------------------------------------
 Chapitre 5
 --------------------------------------------------------------------*/
-/*
 
 gsap.set("#sirene", {drawSVG: "0% 0%"});
 
@@ -145,7 +144,6 @@ gsap.to("#sirene", {
   }
 });
 
-*/
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
