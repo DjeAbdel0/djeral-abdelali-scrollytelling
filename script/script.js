@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MorphSVGPlugin);
 */
-
 let timer;
 
 /*------------------------------------------------------------------
@@ -31,12 +30,16 @@ Header
 Chapitre 1
 --------------------------------------------------------------------*/
 
-// Animation de l'avion avec GSAP
 gsap.to("#atome", {
   duration: 5,
-  repeat: -1,
-  yoyo: true,
-  toggleActions: "restart pause resume complete",
+  markers: true,
+  scrollTrigger: {
+    trigger: "#chapitre-no1",
+    start: "top top",
+    end: "bottom bottom",
+  toggleActions: "play reverse complete restart",
+  },
+  
   motionPath: {
       path: "#cheminChap1",
       align: "#cheminChap1",
@@ -83,8 +86,9 @@ Chapitre 3
 /*---Sprite Sheet Oiseau---*/
 const oiseau = gsap.timeline({
   scrollTrigger: {
-    trigger: ".ss-oiseau",
-    start: "top center",
+    pin: true,
+    trigger: "#chapitre-no3",
+    start: "top top",
     end: "bottom top",
     markers: false,
     scrub: true,
@@ -95,19 +99,20 @@ oiseau.to(".ss-oiseau", { x: "65vw" }, 0);
 /*------------------------------------------------------------------
 Chapitre 4 Morphing
 --------------------------------------------------------------------*/
-/* Gsap Plugins payants
+/*
 let morphTl = gsap.timeline({
   repeatDelay: 0.3,
+  repeat: -1,
+  yoyo: true,
   defaults: {
     duration: 3,
-    transformOrigin: "10% 20%"
+    transformOrigin: "10% 20%",
   },
   scrollTrigger: {
     transformOrigin: "center center",
     trigger: "#chapitre-no4",
     start: "top top",
     end: "bottom top",
-    scrub: true,
     pin: true,
     markers: true,
   },
@@ -116,21 +121,20 @@ let morphTl = gsap.timeline({
 morphTl
 .to("#cercle", { morphSVG: {shape:"#pieuvre", shapeIndex: 17}, scale: 0.1 }) 
 .to("#cercle", { morphSVG: {shape:"#ancre", shapeIndex: 17}, scale: 0.5 })
+
 */
-/*.to(".morphing", { rotate: 180 }, "<5")*/
 
 
 /*------------------------------------------------------------------
 Chapitre 5
 --------------------------------------------------------------------*/
-/* Gsap Plugins payants
+/*
 
 gsap.set("#sirene", {drawSVG: "0% 0%"});
 
 gsap.to("#sirene", {
   drawSVG: "0% 100%",
   duration: 5,
-  ease: "power1.inOut",
   scrollTrigger: {
     markers: true,
     pin: true,
@@ -140,8 +144,8 @@ gsap.to("#sirene", {
     scrub: true
   }
 });
-*/ 
 
+*/
 /*------------------------------------------------------------------
 Chapitre 6
 --------------------------------------------------------------------*/
